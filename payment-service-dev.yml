@@ -4,9 +4,9 @@ spring:
   application:
     name: payment-service
   datasource:
-    username: postgres
-    password: 12345
-    url: jdbc:postgresql://localhost:5432/payment
+    username: root
+    password: 1234
+    url: jdbc:mysql://192.168.1.100:3306/payment?createDatabaseIfNotExist=true
   jpa:
     show-sql: true
     open-in-view: false
