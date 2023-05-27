@@ -2,7 +2,10 @@
 spring:
   application:
     name: filter-service
-
+  data:
+    mongodb:
+      database: filter-db
+      uri: mongodb://192.168.1.100:27017
 
   kafka:
     consumer:
