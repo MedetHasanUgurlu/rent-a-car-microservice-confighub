@@ -5,7 +5,7 @@ spring:
   data:
     mongodb:
       database: invoice-db
-      uri: mongodb://192.168.1.100:27016
+      uri: mongodb://192.168.1.100:27017
 
   kafka:
     consumer:
