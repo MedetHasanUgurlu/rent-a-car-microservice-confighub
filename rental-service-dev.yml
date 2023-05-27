@@ -6,7 +6,7 @@ spring:
   datasource:
     username: root
     password: 1234
-    url: jdbc:mysql://192.168.1.100:3306/rental?createDatabaseIfNotExist=true
+    url: jdbc:mysql://192.168.1.100:3308/rental?createDatabaseIfNotExist=true
   jpa:
     show-sql: true
     open-in-view: false
