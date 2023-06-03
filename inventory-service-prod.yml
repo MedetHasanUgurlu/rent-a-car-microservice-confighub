@@ -5,7 +5,7 @@ spring:
   datasource:
     username: postgres
     password: 12345
-    url: jdbc:postgresql://localhost:3306/inventory
+    url: jdbc:mysql://192.168.1.102:3305/inventory?createDatabaseIfNotExist=true
 
   jpa:
     show-sql: true
