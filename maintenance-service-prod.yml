@@ -6,7 +6,7 @@ spring:
   datasource:
     username: postgres
     password: 12345
-    url: jdbc:postgresql://localhost:5432/maintenance
+    url: jdbc:mysql://192.168.1.100:3307/maintenance?createDatabaseIfNotExist=true
 
   jpa:
     show-sql: true
