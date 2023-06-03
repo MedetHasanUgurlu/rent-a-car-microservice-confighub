@@ -5,7 +5,11 @@ spring:
   datasource:
     username: root
     password: 1234
+<<<<<<< HEAD
     url: jdbc:mysql://localhost:3306/inventory
+=======
+    url: jdbc:mysql://192.168.1.100:3305/inventory?createDatabaseIfNotExist=true
+>>>>>>> 80ce238ee94d794527745391b0e7a9f92342ecab
 
   jpa:
     show-sql: true
@@ -18,12 +22,12 @@ spring:
 
   kafka:
     producer:
-      bootstrap-servers: http://192.168.1.102:9092
+      bootstrap-servers: http://192.168.1.100:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     consumer:
       auto-offset-reset: earliest
-      bootstrap-servers: http://192.168.1.102:9092
+      bootstrap-servers: http://192.168.1.100:9092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         spring:
