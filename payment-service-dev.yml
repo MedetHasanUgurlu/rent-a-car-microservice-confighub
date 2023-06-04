@@ -6,7 +6,7 @@ spring:
   datasource:
     username: root
     password: 1234
-    url: jdbc:mysql://192.168.1.100:3309/payment?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/payment
   jpa:
     show-sql: true
     open-in-view: false
@@ -18,7 +18,7 @@ spring:
 
   kafka:
     producer:
-      bootstrap-servers: http://192.168.1.100:9092
+      bootstrap-servers: http://192.168.1.102:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   cloud:
