@@ -4,7 +4,7 @@ spring:
   security:
     oauth2:
       jwt:
-        jwk-set-uri: http://192.168.1.102:8080/realms/medron/protocol
+        jwk-set-uri: http://192.168.1.102:8080/realms/medron/protocol/openid-connect/certs
 
   datasource:
     username: root
