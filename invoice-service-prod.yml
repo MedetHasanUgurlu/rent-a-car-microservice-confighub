@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: filter-service
+    name: invoice-service
   security:
     oauth2:
       resourceserver:
@@ -9,7 +9,7 @@ spring:
           jwk-set-uri: http://192.168.1.102:8080/realms/medron/protocol/openid-connect/certs
   data:
     mongodb:
-      database: filter-db
+      database: invoice-db
       uri: mongodb://192.168.1.102:27017
 
   kafka:
