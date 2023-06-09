@@ -7,6 +7,53 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+# cloud:
+#    gateway:
+#      routes:
+#        - filters:
+#            - RemoveRequestHeader=Cookie
+#            # Remove the first path segment from the route so it return /api/v1/** instead of /inventory-service/api/v1/**
+#            - StripPrefix=1 
+#          id: inventory-service
+#          predicates:
+#            - Path=/inventory-service/api/v1/**, /inventory-service/actuator/prometheus
+#            - Method=GET,POST,PUT,DELETE
+#          uri: lb://inventory-service
+#        - filters:
+#            - RemoveRequestHeader=Cookie
+#            - StripPrefix=1
+#          id: rental-service
+#          predicates:
+#            - Path=/rental-service/api/v1/**, /rental-service/actuator/prometheus
+#            - Method=GET,POST,PUT,DELETE
+#          uri: lb://rental-service
+#        - filters:
+#            - RemoveRequestHeader=Cookie
+#            - StripPrefix=1
+#          id: payment-service
+#          predicates:
+#            - Path=/payment-service/api/v1/**, /payment-service/actuator/prometheus
+#            - Method=GET,POST,PUT,DELETE
+#          uri: lb://payment-service
+#        - filters:
+#            - RemoveRequestHeader=Cookie
+#            - StripPrefix=1
+#          id: invoice-service
+#          predicates:
+#            - Path=/invoice-service/api/v1/**, /invoice-service/actuator/prometheus
+#            - Method=GET,POST,PUT,DELETE
+#          uri: lb://invoice-service
+#        - filters:
+#            - RemoveRequestHeader=Cookie
+#            - StripPrefix=1
+#          id: filter-service
+#          predicates:
+#            - Path=/filter-service/api/v1/**, /filter-service/actuator/prometheus
+#            - Method=GET,POST,PUT,DELETE
+#          uri: lb://filter-service
+#      discovery:
+#        locator:
+#          enabled: true
 eureka:
   client:
     fetch-registry: true
