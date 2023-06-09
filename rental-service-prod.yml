@@ -42,17 +42,7 @@ eureka:
     instance-id: ${spring.application.name}:${random.int}:${random.value}
     prefer-ip-address: true
 
-management:
-  health:
-    circuitbreakers:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: health
-  endpoint:
-    health:
-      show-details: always
+
 
 resilience4j:
   retry:
@@ -60,6 +50,18 @@ resilience4j:
       inventory-service-retry:
         max-attempts: 5
         wait-duration: 10s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://192.168.1.102:9411/api/v2/spans
 
 # Circuit Breaker Configuration
 #resilience4j:
